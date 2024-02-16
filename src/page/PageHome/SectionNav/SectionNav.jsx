@@ -17,7 +17,7 @@ export const SectionNav = () => {
           Total balance
           <AiTwotoneEye />
         </span>
-        <h1 className=" text-[24px] text-end">$ 80.60</h1>
+        <h1 className=" text-[24px] text-end mr-1">$ 80.60</h1>
       </div>
     </div>
   );
