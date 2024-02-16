@@ -10,7 +10,7 @@ import { FiMessageSquare } from "react-icons/fi";
 import { LinkSidebar } from "../../share/LinkSidebar";
 export const Sidebar = ({moreStyle}) => {
   return (
-    <div className={`relative bg-[#191E25] w-[120px] h-[736px] flex flex-col items-center  justify-around  pt-[34px]  ${moreStyle}`}>
+    <div className={` bg-[#191E25] w-[120px] h-[736px] flex flex-col items-center  justify-between pb-8 pt-[34px] ${moreStyle}`}>
       
       <ul className="flex flex-col gap-[36px]">
         <LinkSidebar moreStyle={'w-[22px] h-[22px]'}  icon={<IoMdHome className='text-[#FFED00] w-[18.32px] h-[18.5px]'/>} />

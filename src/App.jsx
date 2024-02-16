@@ -9,19 +9,21 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-    <Header moreStyle={"relative z-50 h-[100px]"} />
-      <div className="flex">
-        <Sidebar moreStyle={"relative left-0  -top-20 bottom-0 z-0"} />
-        <div className="py-5 bg-[#14181F] w-full flex  justify-center rounded-tl-[50px] shadow-box-header">
+    <div className="h-[100vh]">
+      <Header moreStyle={"relative z-50 h-[10%]"} />
+      <div className="relative  flex  h-[90%]  justify-center w-[100%]">
+        <Sidebar moreStyle={"absolute left-0 h-[100%]"} />
+        <div className="bg-red-600 w-[120px]"></div>
+        <div className="w-full flex justify-center p-2 shadow-box-header bg-[#14181F] rounded-tl-[36px]">
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<PageHome />} />
             </Routes>
           </BrowserRouter>
         </div>
+        
       </div>
-    </>
+    </div>
   );
 }
 

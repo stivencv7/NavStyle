@@ -7,9 +7,10 @@ import usdt from "../../../assets/images/usdt.jpeg";
 import btc from "../../../assets/images/Bitcoin.jpeg";
 export const SectionCryto = () => {
   return (
-    <div>
+    
+      
+      <div className=" flex flex-col gap-[12px] h-[137px] ">
       <h2 className="mb-1 text-[16px]">Crypto</h2>
-      <div className=" flex flex-col gap-3">
         <CardItem image={usdt} text={"USDT"} subtext={'Tether'} amount={`${"16.60000"}`} />
         <CardItem
           image={eth}
@@ -24,6 +25,6 @@ export const SectionCryto = () => {
           amount={`${"4.550000"}`}
         />
       </div>
-    </div>
+   
   );
 };
