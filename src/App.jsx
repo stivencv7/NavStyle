@@ -14,7 +14,7 @@ function App() {
       <div className="relative  flex  h-[90%]  justify-center w-[100%]">
         <Sidebar moreStyle={"absolute left-0 h-[100%]"} />
         <div className="bg-red-600 w-[120px]"></div>
-        <div className="w-full flex justify-center p-2 shadow-box-header bg-[#14181F] rounded-tl-[36px]">
+        <div className="w-full flex justify-center p-2 shadow-box-header bg-[#14181F] rounded-tl-[36px] 2xl:items-center">
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<PageHome />} />
