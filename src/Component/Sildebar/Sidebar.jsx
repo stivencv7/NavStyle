@@ -8,22 +8,30 @@ import { MdLanguage } from "react-icons/md";
 import { MdLogout } from "react-icons/md";
 import { FiMessageSquare } from "react-icons/fi";
 import { LinkSidebar } from "../../share/LinkSidebar";
+import { Icon } from "../../assets/images/Icon";
+import { IconShare } from "../../assets/images/IconShare";
+import { IconMoneyDolar } from "../../assets/images/IconMoneyDolar";
+import { IconMessageInfo } from "../../assets/images/IconMessageInfo";
+import { IconHaus } from "../../assets/images/IconHaus";
+import { IconUsers } from "../../assets/images/IconUsers";
+import { IconLanguage } from "../../assets/images/IconLanguage";
+import { IconLogout } from "../../assets/images/IconLogout";
 export const Sidebar = ({moreStyle}) => {
   return (
-    <div className={` bg-[#191E25] w-[120px] flex flex-col items-center  justify-between pb-8 pt-[34px] ${moreStyle}`}>
+    <div className={` bg-[#191E25] w-[120px] flex flex-col items-center  justify-between pb-8 py-[32px] px-[31px] h-[736px] ${moreStyle}`}>
       
       <ul className="flex flex-col gap-[36px]">
-        <LinkSidebar moreStyle={'w-[22px] h-[22px]'}  icon={<IoMdHome className='text-[#FFED00] w-[18.32px] h-[18.5px]'/>} />
-        <LinkSidebar  icon={<RiMoneyDollarCircleFill className="w-[18.4px]" />} />
-        <LinkSidebar icon={<HiUsers className="w-[20px] h-[15px]"/>} />
-        <LinkSidebar icon={<MdShare />} />
-        <LinkSidebar icon={<MdEmojiPeople />} />
+        <LinkSidebar moreStyle={'w-[22px] h-[22px]'}  icon={<IconHaus />} />
+        <LinkSidebar  icon={<IconMoneyDolar className="w-[18.4px]" />} />
+        <LinkSidebar icon={<IconUsers/>} />
+        <LinkSidebar icon={<IconShare />} />
+        <LinkSidebar icon={<Icon/>} />
       </ul>
 
-      <ul className="flex flex-col gap-6 pt-10 ">
-        <LinkSidebar  icon={<MdLanguage className='text-[#FFED00]'/>} />
-        <LinkSidebar  icon={<MdLogout className='text-[#FFED00]'/>}/>
-        <LinkSidebar  icon={<FiMessageSquare className='mess-inf text-[#FFED00]'></FiMessageSquare>} />
+      <ul className="flex flex-col  h-[170px] justify-between  ">
+        <LinkSidebar  icon={<IconLanguage/>} />
+        <LinkSidebar  icon={<IconLogout/>}/>
+        <LinkSidebar  icon={<IconMessageInfo/>} />
       </ul>
     </div>
   );
