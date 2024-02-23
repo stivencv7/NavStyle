@@ -7,8 +7,8 @@ import usdt from "../../../assets/images/usdt.jpeg";
 import btc from "../../../assets/images/Bitcoin.jpeg";
 export const SectionCryto = () => {
   return (
-    <div className=" flex flex-col gap-[12px] h-[195px] ">
-      <h2 className="text-[16px] font-type">Crypto</h2>
+    <div className=" flex flex-col gap-[12px] max-laptop:h-[180px]  max-desktop:gap-[10px] min-[1366]:h-[195px]">
+      <h2 className="text-[16px] max-desktop:text-[15px] max-desktop:relative max-desktop:top-1 font-type">Crypto</h2>
       <CardItem
         image={usdt}
         text={"USDT"}
