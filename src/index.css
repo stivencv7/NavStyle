@@ -2,16 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
- 
+  
   font-weight: 400;
-  /* color-scheme: light dark; */
-  /* background-color:#191E25; */
-
-  /* font-synthesis: none;
+  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
@@ -22,5 +18,98 @@ h1 {
 nav a:hover ,
 nav a.active{
   color:#FFED00;
-  border-bottom:1px solid #FFED00;
+ 
+  
+}
+
+
+.nav-container {
+  background: #432fbf;
+  display: flex;
+  justify-content: space-between;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  position: relative;
+  width: 500px;
+}
+
+.nav-container .nav-item {
+  color: #999;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.nav-container .nav-item-highlighter {
+  width: 100px;
+  height: 55%;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  visibility: hidden;
+  transition: left .25s;
+}
+
+.nav-container .nav-item.active {
+  color: #fff;
+}
+
+.nav-container .nav-item.active ~ .nav-item-highlighter {
+  visibility: visible;
+}
+
+.nav-container .nav-item.active.item-0 ~ .nav-item-highlighter {
+  left: 12.5%;
+}
+
+.nav-container .nav-item.active.item-1 ~ .nav-item-highlighter {
+  left: 50%;
+}
+
+.nav-container .nav-item.active.item-2 + .nav-item-highlighter {
+  left: 87.5%;
+}
+
+.nav-container .nav-item .fas,
+.nav-container .nav-item .far {
+  transform: translateX(15px);
+  margin-right: 10px;
+  transition: transform 0.25s;
+}
+
+.nav-container .nav-item.active .fas,
+.nav-container .nav-item.active .far {
+  margin-right: 10px;
+  transform: translateX(0px);
+}
+
+.nav-container .nav-item .nav-item-text {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s;
+}
+
+.nav-container .nav-item.active .nav-item-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-container .nav-item-highlighter {
+  width: 100px;
+  height: 55%;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  visibility: hidden;
+  transition: left .25s;
 }

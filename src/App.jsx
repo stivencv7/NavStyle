@@ -1,27 +1,25 @@
-import { useState } from "react";
 import "./App.css";
-import { Header } from "./Component/Header/Header";
-import { Sidebar } from "./Component/Sildebar/Sidebar";
+import { Header } from "./share/layout/Header/Header";
 import { PageHome } from "./page/PageHome/PageHome";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-// bg-[#14181F] rounded-tl-[30em]
-function App() {
-  const [count, setCount] = useState(0);
+import { Routes, Route } from "react-router-dom";
+import { ListLinkSidebar } from "./share/layout/Sildebar/ListLinkSidebar";
 
+function App() {
   return (
-    <>
-    <Header moreStyle={"relative z-50 h-[100px]"} />
-      <div className="flex">
-        <Sidebar moreStyle={"relative left-0  -top-20 bottom-0 z-0"} />
-        <div className="py-5 bg-[#14181F] w-full flex  justify-center rounded-tl-[50px] shadow-box-header">
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<PageHome />} />
-            </Routes>
-          </BrowserRouter>
+    <div className="h-[100vh]  ">
+      <Header moreStyle="relative z-50 h-[100px]  max-desktop:h-[10%] max-laptop:h-[10%]" />
+      <div className="relative  flex  justify-center  max-desktop:h-[90%] max-desktop:w-[100%]  overflow-hidden">
+        <div className="w-[120px] absolute left-0  z-1 bg-transparent group">
+          <ListLinkSidebar className={"relative z-50"} />
+        </div>
+        <div className="w-[130px] bg-black"></div>
+        <div className="w-full flex justify-center relative shadow-box-header z-5 ite bg-[#14181F] rounded-tl-[32px] pt-[42px] pb-[42px] h-[756px] items-center  max-desktop:h-[100%]  overflow-hidden max-laptop:pb-[30px] max-laptop:pt-[30px] ">
+          <Routes>
+            <Route path="/" element={<PageHome />} />
+          </Routes>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
